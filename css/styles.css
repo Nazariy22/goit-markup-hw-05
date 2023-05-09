@@ -161,6 +161,29 @@ button {
   color: var(--activ-cl);
 }
 
+.header-link.active {
+  color: var(--address-cl)
+}
+
+.header-link::after {
+  content: '';
+
+  position: absolute;
+  bottom: 15px;
+  left: 0;
+
+  display: block;
+  width: 100%;
+  height: 4px;
+
+  border-radius: 4px;
+}
+
+.header-link.active::after {
+  background-color: #ff6c00;
+}
+
+
 /**
   |============================
   | Hero
@@ -595,4 +618,54 @@ button {
   padding: 32px 16px;
   border: 1px solid #e7e9fc;
   border-top: none;
+}
+
+/**
+  |============================
+  | Modal window
+  |============================
+*/
+
+.backdrop {
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  width: 100%;
+  height: 100%;
+
+  background-color: rgba(23, 26, 36, 0.3);
+  backdrop-filter: blur(2px);
+}
+.modal {
+  position: absolute;
+  top: calc(50% - 250px);
+  left: calc(50% - 225px);
+
+  width: 450px;
+  height: 500px;
+
+  background-color: var(--background-cl);
+  border-radius: 10px;
+}
+.modal-close-btn {
+  position: absolute;
+  top: -18px;
+  right: -18px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 36px;
+  height: 36px;
+  padding: 0;
+
+  border-radius: 50%;
+  border: none;
+  background-color: #ff6c00;
+}
+.modal-close-icon {
+  fill: #ffffff;
 }
