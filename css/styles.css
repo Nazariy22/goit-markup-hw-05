@@ -146,6 +146,11 @@ button {
   color: var(--address-cl);
 }
 
+.address{
+  transition:color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
 .header-mail:hover,
 .header-mail:focus {
   color: var(--activ-cl);
@@ -169,14 +174,15 @@ button {
   content: "";
 
   position: absolute;
-  bottom: 15px;
   left: 0;
-
+  bottom: -1px;
+  background-color: #404bbf;
+  border-radius: 2px;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   display: block;
   width: 100%;
   height: 4px;
 
-  border-radius: 4px;
 }
 
 .header-link.active::after {
@@ -245,6 +251,8 @@ button {
   border-radius: 4px;
   margin-left: auto;
   margin-right: auto;
+  transition:background-color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
+
 }
 
 .address {
@@ -639,11 +647,6 @@ button {
     visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.is-hidden {
-  transition: opacity 0;
-  visibility: hidden;
-  pointer-events: none;
-}
 
 .modal {
   position: absolute;
@@ -676,14 +679,14 @@ button {
 }
 
 
-.modal-close-button:hover,
-.modal-close-button:focus {
+.modal-close-btn:hover,
+.modal-close-btn:focus {
   border: none;
   background-color: #404bbf;
 
 }
 
-.modal-close-icon {
+.modal-icon {
   color: currentColor;
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
